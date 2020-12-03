@@ -1,0 +1,138 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 7px; /*  bunu apmamızın amacı rem oranını kolayca ayarlamak ve buradan yönetmek için*/
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    background-color: #333;
+}
+a{
+    text-decoration: none;
+}
+p{
+    padding: 1.6rem 0;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+/* aşağıda section_d de boş bir alan oluşturuyoruz footer la arasına*/
+.clearfix::after{
+    content: "";/* divlerin sonuna bir eleman ekliyoruz ve boş adlandırıyoruz*/
+    display: block;/* kaplıyor..*/
+    clear:both;/* görünmüyor*/
+}
+/*  Header işlemleri  */   
+header{
+    height: 45rem;  /*  450 px tekabül eder */
+}
+header #header_img{
+    background-image: url(img/57574560-programming-code-abstract-technology-background-of-software-developer-and-computer-script.jpg);
+    height: 45rem;
+    width: 100%;
+    position: absolute; /* resim sonrasındaki nesneler resmin üzerine kayarlar */
+    background-size: cover; /* cover tanımlandığında genişlik ve yükseklikten küçük olanı yani burada yüksekliğin uzunluğu kapsayıcı genişliğine sığıncaya kadar orantılı şekilde büyütülerek atanmış. */ 
+    background-position: center;  /*  resim külürken veya büyürken odak merkez olur*/
+    opacity: 0.4;   /*  resmin arkasının rengini koyulaştırdık*/
+    z-index: -1; /*  resmi bi arkaya gönderiyoruz ve yazı ön plana çıkmış olur */
+}
+header h1{
+    padding: 11rem;
+    padding-bottom: 0; /* alttan 11rem değerini kapatarak yazıların kaymasını engelliyoruz*/
+}
+header #a_readMore{
+    background: #333;
+    color: #fff;
+    border: 1px solid #666;
+    display: inline-block;
+    padding: 1.6rem 3.2rem;    /* üstten alttan 1.6 sağ sol dan 3.2*/
+    margin: .5rem 0;   /*  altan üsten 0.5  sağsol dan 0 */
+    transition: all 0.3s; /* geçiş süresini ayarlar - all- ikisinede bu özelliği katmak içindir*/
+  
+}
+header #a_readMore:hover{
+    background-color: #aeaeae;
+    color: #333;
+}
+/* Section A*/
+#section_a{
+    background-color:#aeaeae;
+    color: #333;
+    padding: 3.2rem 0;
+}
+/* Section B*/
+#section_b{
+    padding: 2rem;
+}
+#section_b ul{
+    list-style: none;
+}
+#section_b li{
+    background: #fff;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+.col_content{
+    padding: 1.5rem;
+}
+/* section c*/
+#section_c{
+background: #aeaeae;
+color: #333;
+padding: 5rem;
+}
+/* section d */
+#box_a{
+    background-color:#2690d4;
+    padding: 5rem;
+  
+    }
+#box_b{
+        padding: 5rem;
+      
+        }
+/* Footer*/
+footer{
+    padding: 4rem;
+    background: #000;
+}
+footer a{
+    color:#2690d4;
+}
+ /* yukarıda kodlamalarımız mobil web içindi. şimdi daha büyük ekranlar için
+ tasarım yapacağız.. */
+ @media screen and (min-width:800px){
+    html{
+        font-size: 9px;
+    }
+     #section_b li{
+         display: inline-block;
+         margin: 1%;
+         width: 28%;
+         
+     }
+     #section_b img{
+         height: 240px;
+     }
+     #box_a{
+         width: 50%;
+         float: left;
+     }
+     #box_b{
+        width: 50%;
+        float: left;
+    }
+ }
+ @media screen and (min-width:1200px){
+    html{
+        font-size: 12px;
+    }
+ }
